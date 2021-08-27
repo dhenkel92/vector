@@ -1,9 +1,11 @@
 #![deny(missing_docs)]
 
 mod character_delimited;
+mod length_delimited;
 mod newline_delimited;
 
 pub use self::character_delimited::{CharacterDelimitedCodec, CharacterDelimitedDecoderConfig};
+pub use self::length_delimited::{LengthDelimitedCodec, LengthDelimitedDecoderConfig};
 pub use self::newline_delimited::{NewlineDelimitedCodec, NewlineDelimitedDecoderConfig};
 
 use crate::sources::util::TcpError;
