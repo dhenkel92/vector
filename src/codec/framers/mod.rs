@@ -1,7 +1,9 @@
 #![deny(missing_docs)]
 
+mod character_delimited;
 mod newline_delimited;
 
+pub use self::character_delimited::{CharacterDelimitedCodec, CharacterDelimitedDecoderConfig};
 pub use self::newline_delimited::{NewlineDelimitedCodec, NewlineDelimitedDecoderConfig};
 
 use ::bytes::Bytes;

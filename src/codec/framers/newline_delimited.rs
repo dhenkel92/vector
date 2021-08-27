@@ -22,8 +22,8 @@ impl FramingConfig for NewlineDelimitedDecoderConfig {
     fn build(&self) -> BoxedFramer {
         Box::new(
             self.max_length
-                .map(|max_length| NewlineDelimitedCodec::new_with_max_length(max_length))
-                .unwrap_or_else(|| NewlineDelimitedCodec::new()),
+                .map(NewlineDelimitedCodec::new_with_max_length)
+                .unwrap_or_else(NewlineDelimitedCodec::new),
         )
     }
 }
