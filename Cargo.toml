@@ -231,6 +231,7 @@ indexmap = { version = "~1.6.2", default-features = false, features = ["serde"] 
 indoc = { version = "1.0.3", default-features = false }
 inventory = { version = "0.1.10", default-features = false }
 k8s-openapi = { version = "0.13.1", default-features = true, features = ["api", "v1_16"], optional = true }
+lapin = { version = "1.8.0", default-features = true, features = [], optional = true }
 lazy_static = { version = "1.4.0", default-features = false }
 listenfd = { version = "0.3.5", default-features = false, optional = true }
 logfmt = { version = "0.0.2", default-features = false, optional = true }
@@ -415,6 +416,7 @@ sources-logs = [
   "sources-kafka",
   "sources-kubernetes_logs",
   "sources-logstash",
+  "sources-rabbitmq",
   "sources-socket",
   "sources-splunk_hec",
   "sources-stdin",
@@ -473,6 +475,7 @@ sources-utils-http-error = ["warp"]
 sources-utils-http-prelude = ["sources-utils-tls", "sources-utils-http-auth", "sources-utils-http-encoding", "sources-utils-http-error", "warp"]
 sources-utils-http-query = []
 sources-utils-http = ["snap", "sources-utils-tls", "warp", "sources-utils-http-auth", "sources-utils-http-encoding", "sources-utils-http-error", "sources-utils-http-prelude"]
+sources-rabbitmq = ["lapin"]
 sources-utils-tcp-keepalive = []
 sources-utils-tcp-socket = []
 sources-utils-tls = []

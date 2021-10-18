@@ -52,6 +52,8 @@ pub mod nginx_metrics;
 pub mod postgresql_metrics;
 #[cfg(feature = "sources-prometheus")]
 pub mod prometheus;
+#[cfg(feature = "sources-rabbitmq")]
+pub mod rabbitmq;
 #[cfg(feature = "sources-socket")]
 pub mod socket;
 #[cfg(feature = "sources-splunk_hec")]
